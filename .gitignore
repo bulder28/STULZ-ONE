@@ -1,0 +1,139 @@
+# ==============================================================================
+# STULZ ESPAÑA — .gitignore INDUSTRIAL DE MÁXIMA SEGURIDAD (AIR-GAP & ZERO-LEAK)
+# ==============================================================================
+# POLÍTICA: Cero fuga de datos a servidores externos, telemetría o IDEs.
+# Toda información industrial, personal de RRHH, fichajes y secretos queda 100% local.
+# ==============================================================================
+
+# --- SECRETOS, CREDENCIALES Y VARIABLES DE ENTORNO ---
+.env
+.env.*
+!.env.example
+*.env
+*.key
+*.pem
+*.pfx
+*.p12
+*.cer
+*.crt
+*.csr
+secrets/
+credentials/
+tokens.json
+passwords.txt
+
+# --- AI AGENTS & IDE LOCAL TELEMETRY / TRACES ---
+.gemini/
+.system_generated/
+.antigravity/
+.tempmediaStorage/
+.user_uploaded/
+browser/scratchpad_*
+brain/
+*.transcript.jsonl
+*.transcript_full.jsonl
+copilot/
+.cursor/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- BASES DE DATOS, ARCHIVOS SENSIBLES RRHH & COPIAS DE SEGURIDAD ---
+*.bak
+*.mdf
+*.ldf
+*.sql.bak
+*.dump
+personal.xlsx
+personal*.xlsx
+*.xlsx
+*.xls
+tabla_verdad_operarios.csv
+zucchetti*.csv
+fichajes*.csv
+of_plant*.csv
+*.csv.bak
+server/backups/
+backups/
+database/backups/
+
+# --- POWER BI & MICROSOFT FABRIC (PBIX, PBIP, PBIR, DATASETS & CACHE) ---
+*.pbix
+*.pbit
+*.pbip
+*.pbir
+*.pbix.bak
+*.pbit.bak
+*.dataset/
+*.report/
+*.SemanticModel/
+*.Report/
+*.pbi/
+*.abf
+*.bim
+*.tmdl
+msmdsrv.port.txt
+msmdsrv.ini
+msmdsrv.log
+
+# --- LOGS, TRAZABILIDAD Y ARCHIVOS TEMPORALES ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.pid.lock
+*.tmp
+*.temp
+
+# --- NODE.JS & DEPENDENCIAS FRONTEND ---
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+.turbo/
+.npm/
+.yarn/
+*.tsbuildinfo
+
+# --- PYTHON, FASTAPI & PYTEST ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- SISTEMA OPERATIVO Y DISCO ---
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
